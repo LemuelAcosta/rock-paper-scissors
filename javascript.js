@@ -54,10 +54,10 @@ function getValueOfChoice(choiceToInt) {
 function playRound(computerChoice, myChoice) {
     //Here goes the battle...
     //Getting the value of my choice to start the logic
-    let computerValue = getValueOfChoice(computerChoice)
-    let myValue = getValueOfChoice(myChoice)
-    console.log("Computer: " + computerValue)
-    console.log("Me: " + myValue)
+    // let computerValue = getValueOfChoice(computerChoice)
+    // let myValue = getValueOfChoice(myChoice)
+    // console.log("Computer: " + computerValue)
+    // console.log("Me: " + myValue)
 
     /*
     logic goes: Rock, paper and scissor is 1, 2, 3
@@ -71,10 +71,17 @@ function playRound(computerChoice, myChoice) {
     }
     else if (getGreater(computerValue, myValue) == 1) {
         console.log("Computer has won")
+        scoreComputer++;
     }
     else {
         console.log("You have won")
+        myScore++;
     }
+
+    console.log(
+        `Computer score: ${scoreComputer} \n`
+        +`Human score: ${myScore}`
+    )
 }
 
 function getGreater(a, b) {
