@@ -35,19 +35,9 @@ function getUserChoice() {
     return choice;
 }
 
-function playRound(computerChoice, myChoice) {
-    //Here goes the battle...
-    //Getting the value of my choice to start the logic
-    let computerValue = getValueOfChoice(computerChoice)
-    let myValue = getValueOfChoice(myChoice)
-
-}
-
 function getValueOfChoice(choiceToInt) {
-    //herre i get the value of the choice i make
-    choiceToInt = String(choiceToInt.toLoweCase())
 
-    switch (choiceToInt)
+    switch (choiceToInt.toLowerCase)
     {
         case "rock":
             return 1
@@ -60,9 +50,22 @@ function getValueOfChoice(choiceToInt) {
     }    
 }
 
+function playRound(computerChoice, myChoice) {
+    //Here goes the battle...
+    //Getting the value of my choice to start the logic
+    let computerValue = getValueOfChoice(myChoice)
+    let myValue = getValueOfChoice(myChoice)
+
+    /*
+    logic goes: Rock, paper and scissor is 1, 2, 3
+    if computer and me are equal (1=1, 2=2, 3=3) then no one won
+    if one of the choices is greater by one then greater won
+    and if one of the choices is greater by two then the lowest won
+    */
+}
+
 
 computerChoice = getComputerChoice()
 myChoice = getUserChoice()
 
-console.log(computerChoice)
-console.log(myChoice)
+playRound(computerChoice, myChoice)
