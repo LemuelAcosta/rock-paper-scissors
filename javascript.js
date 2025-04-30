@@ -1,6 +1,9 @@
 let computerChoice;
 let myChoice;
 
+let scoreComputer = 0;
+let myScore = 0;
+
 console.log(`Rock, paper and Scissors.. \n`
     + `this game wil be played against the computer \n`
     + `Compute your strats`
@@ -8,26 +11,33 @@ console.log(`Rock, paper and Scissors.. \n`
 
 function getComputerChoice() {
     let random = Math.floor(Math.random() * 3) +1
-    computerChoice = random
+    let Choice = random
 
     switch(random)
     {
         case 1:
-            computerChoice = "Paper"
+            Choice = "Paper"
             break;
         case 2:
-            computerChoice = "Rock"
+            Choice = "Rock"
             break;
         case 3:
-            computerChoice = "Scissor"
+            Choice = "Scissor"
             break;
     }
-    return computerChoice;
+    return Choice;
 }
 
 function getUserChoice() {
-    
+    let Choice
+    choice = prompt("Choose your arm!!")
+
+    return choice;
 }
 
 
-console.log(getComputerChoice())
+computerChoice = getComputerChoice()
+myChoice = getUserChoice()
+
+console.log(computerChoice)
+console.log(myChoice)
