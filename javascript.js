@@ -35,6 +35,31 @@ function getUserChoice() {
     return choice;
 }
 
+function playRound(computerChoice, myChoice) {
+    //Here goes the battle...
+    //Getting the value of my choice to start the logic
+    let computerValue = getValueOfChoice(computerChoice)
+    let myValue = getValueOfChoice(myChoice)
+
+}
+
+function getValueOfChoice(choiceToInt) {
+    //herre i get the value of the choice i make
+    choiceToInt = String(choiceToInt.toLoweCase())
+
+    switch (choiceToInt)
+    {
+        case "rock":
+            return 1
+            break;
+        case "paper":
+            return 2
+            break;
+        default:
+            return 3;
+    }    
+}
+
 
 computerChoice = getComputerChoice()
 myChoice = getUserChoice()
